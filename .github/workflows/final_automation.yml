@@ -18,12 +18,12 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: Create .env for the development
+      - name: Update env to dev
         if: github.ref == 'refs/heads/dev'
         run: |
           echo "${{ secrets.ENV_DEV }}" > .env
 
-      - name: Create .env for the production
+      - name: Update env to main
         if: github.ref == 'refs/heads/main'
         run: |
           echo "${{ secrets.ENV_PROD }}" > .env
