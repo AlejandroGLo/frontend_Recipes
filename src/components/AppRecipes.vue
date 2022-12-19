@@ -292,11 +292,9 @@ export default {
 
       };
   },
-  methods: {
+  methods:{
 
-    gotohome(){
-            this.$router.push('/')
-        },
+
 
     /***************************************************
      * RESTful requests
